@@ -37,12 +37,13 @@ namespace WinFormsApp1
             this.lbl4 = new System.Windows.Forms.Label();
             this.txtInputChar = new System.Windows.Forms.TextBox();
             this.combo1st = new System.Windows.Forms.ComboBox();
+            this.combo2nd = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblStringsIO
             // 
             this.lblStringsIO.AutoSize = true;
-            this.lblStringsIO.Location = new System.Drawing.Point(199, 133);
+            this.lblStringsIO.Location = new System.Drawing.Point(12, 89);
             this.lblStringsIO.Name = "lblStringsIO";
             this.lblStringsIO.Size = new System.Drawing.Size(116, 20);
             this.lblStringsIO.TabIndex = 0;
@@ -51,18 +52,18 @@ namespace WinFormsApp1
             // 
             // txtInput1
             // 
-            this.txtInput1.Location = new System.Drawing.Point(107, 193);
+            this.txtInput1.Location = new System.Drawing.Point(12, 112);
             this.txtInput1.MaxLength = 255;
             this.txtInput1.Name = "txtInput1";
-            this.txtInput1.Size = new System.Drawing.Size(305, 27);
+            this.txtInput1.Size = new System.Drawing.Size(146, 27);
             this.txtInput1.TabIndex = 1;
             this.txtInput1.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // btnConvert
             // 
-            this.btnConvert.Location = new System.Drawing.Point(107, 286);
+            this.btnConvert.Location = new System.Drawing.Point(12, 167);
             this.btnConvert.Name = "btnConvert";
-            this.btnConvert.Size = new System.Drawing.Size(305, 29);
+            this.btnConvert.Size = new System.Drawing.Size(70, 29);
             this.btnConvert.TabIndex = 2;
             this.btnConvert.Text = "Convert String";
             this.btnConvert.UseVisualStyleBackColor = true;
@@ -70,9 +71,9 @@ namespace WinFormsApp1
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(586, 286);
+            this.btnClear.Location = new System.Drawing.Point(258, 167);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(165, 29);
+            this.btnClear.Size = new System.Drawing.Size(92, 29);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -81,7 +82,7 @@ namespace WinFormsApp1
             // lblDisplayedFunctionResult
             // 
             this.lblDisplayedFunctionResult.AutoSize = true;
-            this.lblDisplayedFunctionResult.Location = new System.Drawing.Point(374, 362);
+            this.lblDisplayedFunctionResult.Location = new System.Drawing.Point(53, 210);
             this.lblDisplayedFunctionResult.Name = "lblDisplayedFunctionResult";
             this.lblDisplayedFunctionResult.Size = new System.Drawing.Size(245, 20);
             this.lblDisplayedFunctionResult.TabIndex = 4;
@@ -92,7 +93,7 @@ namespace WinFormsApp1
             // lbl4
             // 
             this.lbl4.AutoSize = true;
-            this.lbl4.Location = new System.Drawing.Point(586, 133);
+            this.lbl4.Location = new System.Drawing.Point(185, 89);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(165, 20);
             this.lbl4.TabIndex = 8;
@@ -101,7 +102,7 @@ namespace WinFormsApp1
             // 
             // txtInputChar
             // 
-            this.txtInputChar.Location = new System.Drawing.Point(586, 193);
+            this.txtInputChar.Location = new System.Drawing.Point(185, 112);
             this.txtInputChar.MaxLength = 10;
             this.txtInputChar.Name = "txtInputChar";
             this.txtInputChar.Size = new System.Drawing.Size(165, 27);
@@ -117,18 +118,35 @@ namespace WinFormsApp1
             "Number of Char from a String",
             "Extract Numbers from a String",
             "Check if text contains Vowel"});
-            this.combo1st.Location = new System.Drawing.Point(318, 68);
+            this.combo1st.Location = new System.Drawing.Point(12, 58);
             this.combo1st.Name = "combo1st";
             this.combo1st.Size = new System.Drawing.Size(338, 28);
             this.combo1st.TabIndex = 13;
             this.combo1st.Text = "Select a function from the drop down";
             this.combo1st.SelectedIndexChanged += new System.EventHandler(this.combo1st_SelectedIndexChanged);
             // 
+            // combo2nd
+            // 
+            this.combo2nd.AllowDrop = true;
+            this.combo2nd.FormattingEnabled = true;
+            this.combo2nd.Items.AddRange(new object[] {
+            "Direct sort",
+            "Bubble sort",
+            "Delete an element from a position",
+            "Binary search"});
+            this.combo2nd.Location = new System.Drawing.Point(424, 58);
+            this.combo2nd.Name = "combo2nd";
+            this.combo2nd.Size = new System.Drawing.Size(233, 28);
+            this.combo2nd.TabIndex = 14;
+            this.combo2nd.Text = "Select an array from the drop down";
+            this.combo2nd.SelectedIndexChanged += new System.EventHandler(this.combo2nd_SelectedIndexChanged);
+            // 
             // Strings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 547);
+            this.Controls.Add(this.combo2nd);
             this.Controls.Add(this.combo1st);
             this.Controls.Add(this.txtInputChar);
             this.Controls.Add(this.lbl4);
@@ -138,7 +156,7 @@ namespace WinFormsApp1
             this.Controls.Add(this.txtInput1);
             this.Controls.Add(this.lblStringsIO);
             this.Name = "Strings";
-            this.Text = "First String";
+            this.Text = "0";
             this.Load += new System.EventHandler(this.Strings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,6 +173,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.TextBox txtInputChar;
         private System.Windows.Forms.ComboBox combo1st;
+        private System.Windows.Forms.ComboBox combo2nd;
     }
 }
 

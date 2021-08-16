@@ -154,5 +154,10 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void combo2nd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
