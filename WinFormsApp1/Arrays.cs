@@ -24,5 +24,14 @@ namespace WinFormsApp1
             }
 
         }
+        public static string ConvertInputIntToOutputString(int[] array)
+        {
+            string intToStringOneByOne = "";
+            for(int i=0; i<array.Length;i++)
+            {
+                intToStringOneByOne += Convert.ToString(array[i]) + " ";
+            }
+            return intToStringOneByOne;
+        }
     }
 }

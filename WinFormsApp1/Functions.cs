@@ -29,6 +29,7 @@ namespace WinFormsApp1
             return newWordWithNumbers;
             //Console.WriteLine($"Numbers are {newWordWithNumbers}");
         }
+
         public static int NrCharTxt(String text, char characterWeAreSearchingFor)
         {
             /*A text of up to 255 characters is considered.
